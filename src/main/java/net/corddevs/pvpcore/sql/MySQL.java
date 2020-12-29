@@ -12,7 +12,6 @@ import java.sql.SQLException;
 public class MySQL {
 
     Plugin pl = Main.getPlugin(Main.class);
-    private String enabled = pl.getConfig().getString("MySQL.enabled");
     private String host = pl.getConfig().getString("MySQL.host");
     private int port = pl.getConfig().getInt("MySQL.port");
     private String username = pl.getConfig().getString("MySQL.username");
@@ -50,22 +49,15 @@ public class MySQL {
     }
 
     public void connect() throws SQLException {
-        if(pl.getConfig().getString("MySQL.enabled").equals("false")) {
+        if(!isConnected()) {
             Bukkit.getConsoleSender().sendMessage(Utils.chat("&7&m---------------------&f &3&lPVPCORE &7&m---------------------"));
             Bukkit.getConsoleSender().sendMessage(Utils.chat(""));
-            Bukkit.getConsoleSender().sendMessage(Utils.chat("&3* &c&WARNING MYSQL DATABASE IS DISABLED BY DEFAULT"));
-            Bukkit.getConsoleSender().sendMessage(Utils.chat("&3* &c&lIF YOU WANT TO USE MYSQL (RECOMMENDED) ENABLE IT IN THE CONFIG.YML"));
+            Bukkit.getConsoleSender().sendMessage(Utils.chat("&3* &c&CONNECTING TO MYSQL DATABASE PLEASE WAIT..."));
+            Bukkit.getConsoleSender().sendMessage(Utils.chat("&b"));
             Bukkit.getConsoleSender().sendMessage(Utils.chat("&7&m---------------------------------------------------"));
-        } else {
-            if(!isConnected()) {
-                Bukkit.getConsoleSender().sendMessage(Utils.chat("&7&m---------------------&f &3&lPVPCORE &7&m---------------------"));
-                Bukkit.getConsoleSender().sendMessage(Utils.chat(""));
-                Bukkit.getConsoleSender().sendMessage(Utils.chat("&3* &c&CONNECTING TO MYSQL DATABASE PLEASE WAIT..."));
-                Bukkit.getConsoleSender().sendMessage(Utils.chat("&b"));
-                Bukkit.getConsoleSender().sendMessage(Utils.chat("&7&m---------------------------------------------------"));
-                connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?useSSL=false", username, pw);
-            }
+            connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?useSSL=false", username, pw);
         }
+
     }
 
 
