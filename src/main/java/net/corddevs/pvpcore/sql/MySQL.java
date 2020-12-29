@@ -3,6 +3,7 @@ package net.corddevs.pvpcore.sql;
 import net.corddevs.pvpcore.Main;
 import net.corddevs.pvpcore.Utils.Utils;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,12 +11,13 @@ import java.sql.SQLException;
 
 public class MySQL {
 
-    private String enabled = Main.getInstance().getConfig().getString("MySQL.enabled");
-    private String host = Main.getInstance().getConfig().getString("MySQL.host");
-    private int port = Main.getInstance().getConfig().getInt("MySQL.port");
-    private String username = Main.getInstance().getConfig().getString("MySQL.username");
-    private String pw = Main.getInstance().getConfig().getString("MySQl.pw");
-    private String database = Main.getInstance().getConfig().getString("MySQL.database");
+    Plugin pl = Main.getPlugin(Main.class);
+    private String enabled = pl.getConfig().getString("MySQL.enabled");
+    private String host = pl.getConfig().getString("MySQL.host");
+    private int port = pl.getConfig().getInt("MySQL.port");
+    private String username = pl.getConfig().getString("MySQL.username");
+    private String pw = pl.getConfig().getString("MySQl.pw");
+    private String database = pl.getConfig().getString("MySQL.database");
     private Connection connection;
 
     public boolean isConnected() {
@@ -37,9 +39,9 @@ public class MySQL {
                         .sendMessage(Utils.chat("&3*" + e));
                 Bukkit.getConsoleSender().sendMessage(Utils.chat(""));
                 Bukkit.getConsoleSender()
-                        .sendMessage(Utils.chat("&3* Version: &b" + Main.getInstance().getDescription().getVersion() + "&7."));
+                        .sendMessage(Utils.chat("&3* Version: &b" + pl.getDescription().getVersion() + "&7."));
                 Bukkit.getConsoleSender()
-                        .sendMessage(Utils.chat("&3* Author(s): &b" + Main.getInstance().getDescription().getAuthors() + "&7."));
+                        .sendMessage(Utils.chat("&3* Author(s): &b&7."));
                 Bukkit.getConsoleSender().sendMessage(Utils.chat("&3* MYSQL ERROR CODE: &C&L4430&7."));
                 Bukkit.getConsoleSender()
                         .sendMessage(Utils.chat("&7&m---------------------------------------------------"));
@@ -48,7 +50,7 @@ public class MySQL {
     }
 
     public void connect() throws SQLException {
-        if(Main.getInstance().getConfig().getString("MySQL.enabled").equals("false")) {
+        if(pl.getConfig().getString("MySQL.enabled").equals("false")) {
             Bukkit.getConsoleSender().sendMessage(Utils.chat("&7&m---------------------&f &3&lPVPCORE &7&m---------------------"));
             Bukkit.getConsoleSender().sendMessage(Utils.chat(""));
             Bukkit.getConsoleSender().sendMessage(Utils.chat("&3* &c&WARNING MYSQL DATABASE IS DISABLED BY DEFAULT"));

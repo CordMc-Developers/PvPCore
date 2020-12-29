@@ -1,0 +1,7 @@
+MySQL:
+  enabled: false #false by default if you wanna use mysql set it to true
+  host: localhost
+  username: root
+  password: password
+  port: '3306'
+  database: PvPCore

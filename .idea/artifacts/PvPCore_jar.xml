@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PvPCore:jar">
+    <output-path>$USER_HOME$/Desktop/test server/plugins</output-path>
+    <root id="archive" name="PvPCore.jar">
+      <element id="module-output" name="PvPCore" />
+    </root>
+  </artifact>
+</component>
