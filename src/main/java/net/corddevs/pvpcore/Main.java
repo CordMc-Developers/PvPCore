@@ -6,6 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
 
+    public static Main instance;
+
     @Override
     public void onEnable() {
         if (Bukkit.getPluginManager().isPluginEnabled("PlaceHolderAPI")) {
@@ -41,5 +43,9 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+    }
+
+    public static Main getInstance() {
+        return Main.instance;
     }
 }
