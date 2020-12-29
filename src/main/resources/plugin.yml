@@ -1,0 +1,4 @@
+name: Pvpcore
+version: ${project.version}
+main: net.corddevs.pvpcore.Main
+authors: [ Nemijah, SlowNewt ]
