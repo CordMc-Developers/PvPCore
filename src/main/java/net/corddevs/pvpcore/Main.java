@@ -1,8 +1,9 @@
 package net.corddevs.pvpcore;
 
 import net.corddevs.pvpcore.Commands.Clear;
-import net.corddevs.pvpcore.Commands.dm;
-import net.corddevs.pvpcore.Commands.dr;
+//import net.corddevs.pvpcore.Commands.dm;
+//import net.corddevs.pvpcore.Commands.dr;
+import net.corddevs.pvpcore.Commands.gamemode;
 import net.corddevs.pvpcore.Commands.tp;
 import net.corddevs.pvpcore.Kits.Kits;
 import net.corddevs.pvpcore.Kits.Resetcooldowns;
@@ -90,6 +91,7 @@ public class Main extends JavaPlugin {
         //commands
         getCommand("clear").setExecutor(new Clear());
         getCommand("tp").setExecutor(new tp());
+        getCommand("gamemode").setExecutor(new gamemode());
         /*
         getCommand("dm").setExecutor(new dm());
         getCommand("d4").setExecutor(new dr());

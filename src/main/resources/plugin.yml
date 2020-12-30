@@ -1,7 +1,7 @@
 name: PvPCore
 version: ${project.version}
 main: net.corddevs.pvpcore.Main
-authors: [ Nemijah, SlowNewt ]
+authors: [ Nemijah, SlowNewt, Cinr, ym3n ]
 commands:
   kills:
   deaths:
@@ -14,3 +14,5 @@ commands:
     aliases: [teleport]
   dm:
   dr:
+  gamemode:
+    aliases: [gm]
