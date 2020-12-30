@@ -6,6 +6,11 @@ commands:
   kills:
   deaths:
   kits:
+    aliases: [kit]
   resetcooldowns:
   clear:
     aliases: [cl]
+  tp:
+    aliases: [teleport]
+  dm:
+  dr:

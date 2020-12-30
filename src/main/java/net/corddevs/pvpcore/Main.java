@@ -1,5 +1,9 @@
 package net.corddevs.pvpcore;
 
+import net.corddevs.pvpcore.Commands.Clear;
+import net.corddevs.pvpcore.Commands.dm;
+import net.corddevs.pvpcore.Commands.dr;
+import net.corddevs.pvpcore.Commands.tp;
 import net.corddevs.pvpcore.Kits.Kits;
 import net.corddevs.pvpcore.Kits.Resetcooldowns;
 import net.corddevs.pvpcore.Scoreboard.ScoreBoard2;
@@ -18,7 +22,7 @@ import java.sql.SQLException;
 public class Main extends JavaPlugin {
     public static MySQL SQL;
     public static SQLGetter data;
-    public static String prefix = Utils.chat("&3&lCORD&B&LMC");
+    public static String prefix = Utils.chat("&3&lCORD&B&LMC &7");
     public FileConfiguration config = getConfig();
 
     @SuppressWarnings("static-access")
@@ -84,7 +88,12 @@ public class Main extends JavaPlugin {
 
 
         //commands
-        getCommand("clear").setExecutor(this);
+        getCommand("clear").setExecutor(new Clear());
+        getCommand("tp").setExecutor(new tp());
+        /*
+        getCommand("dm").setExecutor(new dm());
+        getCommand("d4").setExecutor(new dr());
+        */
     }
 
     public void loadConfig() {
