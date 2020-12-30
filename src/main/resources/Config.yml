@@ -1,6 +1,13 @@
-MySQL:
-  host: localhost
-  username: root
-  password: password
-  port: '3306'
-  database: PvPCore
+# =================================================
+# =                  PvPCore                      =
+# =================================================
+
+# General
+debug: false # true/false (default: false)
+
+# Mysql
+host: '173.212.218.10'
+port: 3306
+database: 's9_pvp'
+username: 'u9_zuwVzqazYR'
+password: '3J@aBzPWO4yq1.wa^PT7HGEh'
