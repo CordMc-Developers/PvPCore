@@ -16,16 +16,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.sql.SQLException;
 
 public class Main extends JavaPlugin {
-    public FileConfiguration config = getConfig();
     public static MySQL SQL;
     public static SQLGetter data;
     public static String prefix = Utils.chat("&3&lCORD&B&LMC");
+    public FileConfiguration config = getConfig();
 
     @SuppressWarnings("static-access")
     @Override
     public void onEnable() {
-        loadConfig();
-
         if (Bukkit.getPluginManager().isPluginEnabled("PlaceHolderAPI")) {
             Bukkit.getConsoleSender()
                     .sendMessage(Utils.chat("&7&m---------------------&f &3&lPVPCORE &7&m---------------------"));
@@ -62,6 +60,7 @@ public class Main extends JavaPlugin {
             SQL.connect();
         } catch (SQLException e) {
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "MYSQL DATABASE FAILED TO CONNECT!!!");
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + String.valueOf(e));
         }
 
         if (SQL.isConnected()) {
@@ -87,17 +86,15 @@ public class Main extends JavaPlugin {
         //commands
     }
 
+    public void loadConfig() {
+        config.options().copyDefaults();
+        saveDefaultConfig();
+    }
+
     @Override
     public void onDisable() {
         // Plugin shutdown logic
         SQL.disconnect();
     }
 
-    public void loadConfig() {
-        // Load Config class
-        Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + "Loading config...");
-        config.options().copyDefaults();
-        saveDefaultConfig();
-        Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "CONFIG LOADED SUCCESSFULLY");
-    }
 }

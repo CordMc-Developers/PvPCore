@@ -1,4 +1,9 @@
-name: Pvpcore
+name: PvPCore
 version: 1.0
 main: net.corddevs.pvpcore.Main
 authors: [ Nemijah, SlowNewt ]
+commands:
+  kills:
+  deaths:
+  kits:
+  resetcooldowns:

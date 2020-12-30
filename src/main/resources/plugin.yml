@@ -1,4 +1,9 @@
-name: Pvpcore
+name: PvPCore
 version: ${project.version}
 main: net.corddevs.pvpcore.Main
 authors: [ Nemijah, SlowNewt ]
+commands:
+  kills:
+  deaths:
+  kits:
+  resetcooldowns:
