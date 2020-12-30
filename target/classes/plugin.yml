@@ -7,3 +7,5 @@ commands:
   deaths:
   kits:
   resetcooldowns:
+  clear:
+    aliases: [cl]
