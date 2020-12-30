@@ -84,6 +84,7 @@ public class Main extends JavaPlugin {
 
 
         //commands
+        getCommand("clear").setExecutor(this);
     }
 
     public void loadConfig() {
