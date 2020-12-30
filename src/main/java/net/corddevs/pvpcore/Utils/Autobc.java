@@ -15,6 +15,6 @@ public class Autobc {
                 Bukkit.broadcastMessage("");
             }
 
-        }, 0, 750);
+        }, 0, 2160);
     }
 }
