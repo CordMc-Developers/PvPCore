@@ -1,10 +1,8 @@
 package net.corddevs.pvpcore;
 
-import net.corddevs.pvpcore.Commands.Clear;
+import net.corddevs.pvpcore.Commands.*;
 //import net.corddevs.pvpcore.Commands.dm;
 //import net.corddevs.pvpcore.Commands.dr;
-import net.corddevs.pvpcore.Commands.gamemode;
-import net.corddevs.pvpcore.Commands.tp;
 import net.corddevs.pvpcore.Kits.Kits;
 import net.corddevs.pvpcore.Kits.Resetcooldowns;
 import net.corddevs.pvpcore.Scoreboard.ScoreBoard2;
@@ -29,7 +27,7 @@ public class Main extends JavaPlugin {
     @SuppressWarnings("static-access")
     @Override
     public void onEnable() {
-        if (Bukkit.getPluginManager().isPluginEnabled("PlaceHolderAPI")) {
+        if (!Bukkit.getPluginManager().isPluginEnabled("PlaceHolderAPI")) {
             Bukkit.getConsoleSender()
                     .sendMessage(Utils.chat("&7&m---------------------&f &3&lPVPCORE &7&m---------------------"));
             Bukkit.getConsoleSender()
@@ -92,6 +90,11 @@ public class Main extends JavaPlugin {
         getCommand("clear").setExecutor(new Clear());
         getCommand("tp").setExecutor(new tp());
         getCommand("gamemode").setExecutor(new gamemode());
+        getCommand("tphere").setExecutor(new tphere());
+        getCommand("freeze").setExecutor(new freeze());
+        getCommand("unfreeze").setExecutor(new unfreeze());
+        getCommand("fly").setExecutor(new fly());
+        getCommand("staff").setExecutor(new StaffMode());
         /*
         getCommand("dm").setExecutor(new dm());
         getCommand("d4").setExecutor(new dr());

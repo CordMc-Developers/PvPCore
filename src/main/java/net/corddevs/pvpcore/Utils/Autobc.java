@@ -11,7 +11,7 @@ public class Autobc {
             @Override
             public synchronized void run() {
                 Bukkit.broadcastMessage("");
-                Bukkit.broadcastMessage(Utils.chat("&b&lCORD&3&lMC &7Join our Discord at &3&ndiscord.cordmc.net&7."));
+                Bukkit.broadcastMessage(Utils.chat("&7Join our Discord at &bdiscord.cordmc.net&7."));
                 Bukkit.broadcastMessage("");
             }
 

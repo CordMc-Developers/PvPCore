@@ -12,7 +12,16 @@ commands:
     aliases: [cl]
   tp:
     aliases: [teleport]
+  tphere:
   dm:
   dr:
   gamemode:
     aliases: [gm]
+
+  freeze:
+    aliases: [f]
+  unfreeze:
+    aliases: [uf]
+  fly:
+  staff:
+    aliases: [staffmode, sm, s, StaffMode]
