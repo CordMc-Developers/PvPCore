@@ -7,26 +7,25 @@ depend:
   - PlaceholderAPI
   - ActionBarAPI
 commands:
-  kills:
-  deaths:
-  kits:
-    aliases: [kit]
-  resetcooldowns:
-  clear:
-    aliases: [cl]
+  fly:
+    description: Enables / Disables your flight
   tp:
     aliases: [teleport]
+    description: teleports you to a player
   tphere:
-  dm:
-  dr:
-  gamemode:
-    aliases: [gm]
-  fly:
-  staff:
-    aliases: [staffmode, sm, s, StaffMode]
-  vanish:
-    aliases: [v]
+    aliases: [teleporthere]
+    description: teleports a player to you
   freeze:
-    aliases: []
-  setspawn:
-  spawn:
+    description: Freezes a player
+  clear:
+    description: clears your inventory
+    aliases: [cl, ci, cls, cli]
+  gamemode:
+    description: change your gamemode
+    aliases: [gm]
+  staff:
+    description: toggle staff mode
+    aliases: [staffmode, sm, StaffMode]
+  vanish:
+    description: vanish from normal players
+    aliases: [v]
