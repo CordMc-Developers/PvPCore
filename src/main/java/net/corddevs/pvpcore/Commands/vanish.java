@@ -1,6 +1,5 @@
 package net.corddevs.pvpcore.Commands;
 
-import com.connorlinfoot.actionbarapi.ActionBarAPI;
 import net.corddevs.pvpcore.Main;
 import net.corddevs.pvpcore.Utils.Utils;
 import org.bukkit.Bukkit;
@@ -39,7 +38,6 @@ public class vanish implements CommandExecutor {
                 } else {
                     vanished.add(player);
                     player.sendMessage(Utils.chat(Main.prefix + " vanished enabled"));
-                    ActionBarAPI.sendActionBar(player, "§cVANISH §f enabled");
                     for(Player all : Bukkit.getOnlinePlayers()) {
                         if(all.hasPermission("cord.*") || all.hasPermission("cord.staff.bypass")) {
                             all.showPlayer(player);

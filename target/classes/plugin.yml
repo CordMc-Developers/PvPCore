@@ -1,7 +1,11 @@
 name: PvPCore
 version: 1.0
 main: net.corddevs.pvpcore.Main
-authors: [ Nemijah, SlowNewt, Cinr, ym3n ]
+authors: [ Nemijah, SlowNewt, ym3n, benjables ]
+depend:
+  - LuckPerms
+  - PlaceholderAPI
+  - ActionBarAPI
 commands:
   kills:
   deaths:
@@ -12,7 +16,15 @@ commands:
     aliases: [cl]
   tp:
     aliases: [teleport]
+  tphere:
   dm:
   dr:
   gamemode:
     aliases: [gm]
+  fly:
+  staff:
+    aliases: [staffmode, sm, s, StaffMode]
+  vanish:
+    aliases: [v]
+  freeze:
+    aliases: []

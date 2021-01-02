@@ -85,6 +85,7 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new chatEvent(), this);
         getServer().getPluginManager().registerEvents(new onDeath(), this);
         getServer().getPluginManager().registerEvents(new ScoreBoardEvents(), this);
+        getServer().getPluginManager().registerEvents(new MoveEvent(), this);
 
 
         //commands
@@ -93,10 +94,11 @@ public class Main extends JavaPlugin {
         getCommand("gamemode").setExecutor(new gamemode());
         getCommand("tphere").setExecutor(new tphere());
         getCommand("freeze").setExecutor(new freeze());
-        getCommand("unfreeze").setExecutor(new unfreeze());
         getCommand("fly").setExecutor(new fly());
         getCommand("staff").setExecutor(new StaffMode());
         getCommand("vanish").setExecutor(new vanish());
+        getCommand("setspawn").setExecutor(new setspawn());
+        getCommand("spawn").setExecutor(new spawn());
         /*
         getCommand("dm").setExecutor(new dm());
         getCommand("d4").setExecutor(new dr());

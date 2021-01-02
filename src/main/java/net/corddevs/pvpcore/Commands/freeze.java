@@ -25,7 +25,7 @@ public class freeze implements CommandExecutor {
 
         if(player.hasPermission("cord.staff")) {
             if(args.length == 0) {
-
+                player.sendMessage(Utils.chat(Main.prefix + " Invalid args!"));
             } else {
                 Player target = Bukkit.getPlayer(args[0]);
                 if(target.isOnline()) {

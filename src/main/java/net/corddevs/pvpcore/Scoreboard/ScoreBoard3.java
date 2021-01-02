@@ -34,12 +34,12 @@ public class ScoreBoard3 {
         sb.setName(Utils.chat("&c&lPVP"));
         sb.updateLine(9, Utils.chat("&8&m-------------------"));
         sb.updateLine(8, Utils.chat("&b" + p.getName() + "&8:"));
-        sb.updateLine(7, Utils.chat("  » &7EXP: &f" + Main.data.playerXpGetter(p.getUniqueId())));
-        sb.updateLine(6, Utils.chat("  » &7Deaths: &f" + Main.data.playerDeathGetter(p.getUniqueId())));
-        sb.updateLine(5, Utils.chat("  » &7Kills: &f" + Main.data.playerKillGetter(p.getUniqueId())));
-        sb.updateLine(4, Utils.chat("  » &7KDR" + " &fComing soon"));
-        sb.updateLine(3, Utils.chat("  » &7"));
-        sb.updateLine(2, Utils.chat("  » &3play.cordmc.net"));
+        sb.updateLine(7, Utils.chat("  &8» &7EXP: &f" + Main.data.playerXpGetter(p.getUniqueId())));
+        sb.updateLine(6, Utils.chat("  &8» &7Deaths: &f" + Main.data.playerDeathGetter(p.getUniqueId())));
+        sb.updateLine(5, Utils.chat("  &8» &7Kills: &f" + Main.data.playerKillGetter(p.getUniqueId())));
+        sb.updateLine(4, Utils.chat("  &8» &7KDR" + " &fComing soon"));
+        sb.updateLine(3, Utils.chat("  &8» &7"));
+        sb.updateLine(2, Utils.chat("  &8» &3play.cordmc.net"));
         sb.updateLine(1, Utils.chat("&8&m-------------------"));
     }
 
