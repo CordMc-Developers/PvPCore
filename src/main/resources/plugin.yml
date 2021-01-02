@@ -1,7 +1,11 @@
 name: PvPCore
 version: ${project.version}
 main: net.corddevs.pvpcore.Main
-authors: [ Nemijah, SlowNewt, Cinr, ym3n ]
+authors: [ Nemijah, SlowNewt, ym3n, benjables ]
+depend:
+  - LuckPerms
+  - PlaceholderAPI
+  - ActionBarAPI
 commands:
   kills:
   deaths:
@@ -25,3 +29,6 @@ commands:
   fly:
   staff:
     aliases: [staffmode, sm, s, StaffMode]
+
+  vanish:
+    aliases: [v]

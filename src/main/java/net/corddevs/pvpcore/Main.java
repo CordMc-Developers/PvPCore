@@ -1,8 +1,6 @@
 package net.corddevs.pvpcore;
 
 import net.corddevs.pvpcore.Commands.*;
-//import net.corddevs.pvpcore.Commands.dm;
-//import net.corddevs.pvpcore.Commands.dr;
 import net.corddevs.pvpcore.Kits.Kits;
 import net.corddevs.pvpcore.Kits.Resetcooldowns;
 import net.corddevs.pvpcore.Scoreboard.ScoreBoard2;
@@ -17,6 +15,9 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.sql.SQLException;
+
+//import net.corddevs.pvpcore.Commands.dm;
+//import net.corddevs.pvpcore.Commands.dr;
 
 public class Main extends JavaPlugin {
     public static MySQL SQL;
@@ -95,6 +96,7 @@ public class Main extends JavaPlugin {
         getCommand("unfreeze").setExecutor(new unfreeze());
         getCommand("fly").setExecutor(new fly());
         getCommand("staff").setExecutor(new StaffMode());
+        getCommand("vanish").setExecutor(new vanish());
         /*
         getCommand("dm").setExecutor(new dm());
         getCommand("d4").setExecutor(new dr());
