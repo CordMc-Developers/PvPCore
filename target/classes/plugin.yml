@@ -28,3 +28,5 @@ commands:
     aliases: [v]
   freeze:
     aliases: []
+  setspawn:
+  spawn:

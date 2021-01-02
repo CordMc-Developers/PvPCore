@@ -27,6 +27,6 @@ commands:
   vanish:
     aliases: [v]
   freeze:
-    aliases: [
+    aliases: []
   setspawn:
   spawn:
